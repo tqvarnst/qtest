@@ -1,0 +1,30 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Red Hat OpenJDK 8
+    openshift.io/image.dockerRepositoryCheck: 2019-09-09T14:41:01Z
+    openshift.io/provider-display-name: Red Hat, Inc.
+    version: test
+  generation: 2
+  name: openjdk18
+  
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Build and run Java applications using Maven and OpenJDK 8.
+      iconClass: icon-rh-openjdk
+      openshift.io/display-name: Red Hat OpenJDK 8
+      sampleContextDir: undertow-servlet
+      sampleRepo: https://github.com/jboss-openshift/openshift-quickstarts
+      supports: java:8
+      tags: builder,java,openjdk,hidden
+      version: "1.0"
+    from:
+      kind: DockerImage
+      name: quay.io/tqvarnst/openjdk18-openshift:test
+    generation: 2
+    importPolicy: {}
+    name: "test"
