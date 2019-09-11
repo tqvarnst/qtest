@@ -67,6 +67,12 @@
   </build>
   <profiles>
     <profile>
+      <id>openshift</id>
+      <build>
+        <finalName>getting-started-runner.jar</finalName>
+      </build>
+    </profile>
+    <profile>
       <id>native</id>
       <activation>
         <property>
