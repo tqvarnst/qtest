@@ -69,7 +69,7 @@
     <profile>
       <id>openshift</id>
       <build>
-        <finalName>getting-started-runner.jar</finalName>
+        <finalName>getting-started</finalName>
       </build>
     </profile>
     <profile>
